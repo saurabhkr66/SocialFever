@@ -22,7 +22,7 @@ const isAuth=Boolean(useSelector((state)=>state.token));
             <CssBaseline/>
         <Routes>
           <Route path='/' element={<LoginPage/>} />
-          <Route path='/profile/:userId' element={<ProfilePage />} />
+          <Route path='/profile/:userId' element={isAuth?<ProfilePage />:<Navigate to="/"/>} />
           <Route path='/home' element={isAuth?<HomePage />:<Navigate to ="/"/>} />
         </Routes>
         </ThemeProvider>
