@@ -23,7 +23,7 @@ import FlexBetween from "../../components/FlexBetween";
   import WidgetWrapper from "../../components/WidgetWrapper";
   import { useState } from "react";
   import { useDispatch, useSelector } from "react-redux";
-  import { setPosts } from "state";
+  import { setPosts } from "../../state";
   
   const MyPostWidget = ({ picturePath }) => {
     const dispatch = useDispatch();
